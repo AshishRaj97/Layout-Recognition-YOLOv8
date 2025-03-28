@@ -65,7 +65,7 @@ pip install pandas matplotlib pillow
 
 📊 **Training Loss & mAP Trends Over Epochs:**  
 
-![Training Loss & mAP Trends](path/to/training_loss_map.png)  
+![Training Loss & mAP Trends](path/to/training_loss_map.png) ![download](https://github.com/user-attachments/assets/82e2b6ef-e2c8-4684-9735-b0061bd7f2b2)
 
 📈 **Precision-Recall Curve:**  
 
