@@ -65,11 +65,11 @@ pip install pandas matplotlib pillow
 
 📊 **Training Loss & mAP Trends Over Epochs:**  
 
-![Training Loss & mAP Trends](path/to/training_loss_map.png) ![download](https://github.com/user-attachments/assets/82e2b6ef-e2c8-4684-9735-b0061bd7f2b2)
+![download](https://github.com/user-attachments/assets/82e2b6ef-e2c8-4684-9735-b0061bd7f2b2)
 
 📈 **Precision-Recall Curve:**  
 
-![Precision-Recall Curve](path/to/precision_recall_curve.png)
+![download](https://github.com/user-attachments/assets/e3e92478-d896-4f30-a716-0806564cf981)
 
 ## 🚀 Observations  
 ✔ **Good model convergence** with minimal overfitting.  
