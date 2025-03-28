@@ -16,15 +16,6 @@ The model detects **text regions**, including **headings, main text, authors, an
 
 ---
 
-## 📂 Project Structure  
-
-📂 Layout_Recognition-YOLOv8/
-┣ 📂 data/ # Dataset (Train, Test, Validation, data.yaml)
-┣ 📂 YOLO_results/ # Trained models & predictions
-┣ 📜 Layout_Recognition.ipynb # Jupyter Notebook (Training & Inference)
-┣ 📜 README.md # Project Documentation
-┣ 📜 LICENSE # MIT License
-
 ## ⚙️ Requirements  
 
 - **Python 3.7+**  
@@ -70,6 +61,10 @@ pip install pandas matplotlib pillow
 📈 **Precision-Recall Curve:**  
 
 ![download](https://github.com/user-attachments/assets/e3e92478-d896-4f30-a716-0806564cf981)
+
+✅ Successful Layout Recognition:
+
+![d2869d59-2563-4794-80c4-a8d21063e2c1](https://github.com/user-attachments/assets/7aa4ef01-18a2-46fc-96cb-8b542b2b54f2)
 
 ## 🚀 Observations  
 ✔ **Good model convergence** with minimal overfitting.  
