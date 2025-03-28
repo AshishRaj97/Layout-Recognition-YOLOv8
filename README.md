@@ -26,7 +26,7 @@ The model detects **text regions**, including **headings, main text, authors, an
 
 ### 1️⃣ Clone the Repository  
 ```bash
-git clone https://github.com/your-username/YOLOv8-Layout-Recognition.git
+git clone https://github.com/AshishRaj97/Layout-Recognition-YOLOv8.git
 ```
 ### 2️⃣ Install Required Packages
 ```bash
