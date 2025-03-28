@@ -18,7 +18,8 @@ The model detects **text regions**, including **headings, main text, authors, an
 
 ## ⚙️ Requirements  
 
-- **Python 3.7+**  
+- **Python 3.7+**
+- **GPU (Recommended): A Tesla T4 (used in Colab) or any NVIDIA GPU with at least 8GB VRAM for faster training.**  
 - **Ultralytics YOLOv8**  
 - **PyTorch, Pandas, Matplotlib, Pillow (PIL)**
 
