@@ -31,10 +31,10 @@ The model detects **text regions**, including **headings, main text, authors, an
 
 ### 🎯 Model Selection & Training Details
 
-🔹Why YOLOv8?
+🔹**Why YOLOv8?**
   - YOLOv8 offers high-speed object detection and performs well on small datasets.
   - The model is lightweight yet powerful for text region detection in historical documents.
-🔹 Training Setup:
+🔹 **Training Setup:**
   - Model: YOLOv8m
   - Optimizer: AdamW
   - Batch Size: 16
@@ -42,6 +42,20 @@ The model detects **text regions**, including **headings, main text, authors, an
   - Learning Rate: 0.001
   - Augmentations: Rotation, Contrast Adjustments, Shearing, Perspective Transformations
   - Confidence Threshold & IoU: Tuned for better text region segmentation
+
+🔹 **Model Selection: Why YOLOv8 over Transformers?**
+- The RenAIssance Project suggests using convolutional-recurrent, transformer-based, or self-supervised models. While transformer-based models like LayoutLM or Swin Transformer are effective for structured document parsing, they are computationally expensive and require larger datasets.
+- Instead, YOLOv8m, a convolutional model, was chosen due to:
+    - ✔ Efficient object detection, suitable for layout recognition in small datasets.
+    - ✔ Fast inference speed, crucial for historical document processing.
+    - ✔ Ability to detect localized text regions without needing OCR integration.
+For future iterations, I aim to experiment with Vision Transformer (ViT)-based YOLO variants to improve performance further.
+
+|Model	            |   Speed	 |   Accuracy  	|Computational Cost       |  Text Region Suitability       |
+|-------------------|----------|--------------|-------------------------|--------------------------------|
+|YOLOv8	            |⚡ Fast	 |✅ High	    |  💰 Low	                |🏆 Best for small datasets      |
+|LayoutLM	          |🐢 Slow	 |✅ High	    |💰💰 Expensive	        |👍 Good for structured layouts  |  
+|Swin Transformer	  |🐢 Slow	 |🔥 Very High	|💰💰💰 Very Expensive	  |✅ Strong but needs large data  |
 
 ---
 
@@ -55,8 +69,18 @@ The model detects **text regions**, including **headings, main text, authors, an
 | Recall       | 86.3%     |
 | mAP@0.5      | 91.2%     |
 | mAP@0.5:0.95 | 75.9%     |
-| IoU Score    | 82.5%     |
 | F1-Score     | 85.8%     |
+
+🔹 **Why These Metrics?**
+- Since layout recognition requires precise text region detection while ignoring embellishments, we use Precision, Recall, and F1-score to measure detection accuracy and balance between false positives and false negatives. mAP@0.5 and mAP@0.5:0.95 ensure robustness across different localization overlaps.
+
+📌 **Evaluation Metrics:**
+- **Precision (85.4%):** Measures the percentage of correctly detected text regions among all detected regions. A high precision ensures that the model minimizes false positives (incorrectly detecting embellishments or margins as text).
+- **Recall (86.3%):** Represents how many actual text regions were correctly detected. A high recall means the model effectively captures most text areas, reducing false negatives (missed text regions).
+- **mAP@0.5 (91.2%):** Measures detection accuracy with a 50% IoU threshold, evaluating how well the model identifies text regions. A high score means strong localization performance.
+- **mAP@0.5:0.95 (75.9%):** A more stringent metric that averages mAP across multiple IoU thresholds (from 0.5 to 0.95), testing the model’s robustness. A score of 75.9% suggests that the model maintains reliable detection across varying levels of overlap.
+- **F1-score (85.8%):** A balance between Precision & Recall, useful for layout recognition where both false positives (wrong elements detected as text) and false negatives (missed text regions) need to be minimized.
+- **IoU (Intersection over Union):** Measures how well predicted text regions overlap with ground truth annotations. A higher IoU ensures more accurate text localization.
 
 📊 **Training Loss & mAP Trends Over Epochs:**  
 
