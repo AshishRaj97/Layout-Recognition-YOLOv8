@@ -19,9 +19,9 @@ The model detects **text regions**, including **headings, main text, authors, an
 
 ### 📜 Dataset & Preprocessing
 
--🔹 Dataset: The dataset consists of 6 scanned early modern printed sources.
--🔹 Preprocessing: The PDFs were converted to images and annotated in Roboflow to label only the main text regions. The dataset was then exported in YOLOv8 format for training.
--🔹 Challenges: Variability in text layout, marginalia, and embellishments required precise annotation.
+- Dataset: The dataset consists of 6 scanned early modern printed sources.
+- Preprocessing: The PDFs were converted to images and annotated in Roboflow to label only the main text regions. The dataset was then exported in YOLOv8 format for training.
+- Challenges: Variability in text layout, marginalia, and embellishments required precise annotation.
 
 📥 **Download Dataset & YOLO Results:**  
 - 📁 [Dataset (Train, Test, Valid)](https://drive.google.com/drive/folders/1tvZZfsfFHPlLx26hQEDGcEnAJ6h9g0wm?usp=drive_link)  
